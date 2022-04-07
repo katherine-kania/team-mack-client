@@ -15,7 +15,7 @@ import ChangePassword from './components/auth/ChangePassword'
 import IndexFavorites from './components/Favorites/IndexFavorites'
 import ShowFavorite from './components/Favorites/ShowFavorite'
 import GetSearch from './components/Search/GetSearch'
-import IndexComments from './components/Comments/IndexComments'
+// import IndexComments from './components/Comments/IndexComments'
 import SearchShow from './components/Search/SearchShow'
 
 
@@ -106,13 +106,13 @@ const App = () => {
 							<ShowFavorite msgAlert={msgAlert} user={user} />
 						</RequireAuth>}
 				/>
-				<Route
+				{/* <Route
 					path='/favorites/:id'
 					element={
 						<RequireAuth user={user}>
 							<IndexComments user={user} />
 						</RequireAuth>}
-				/>
+				/> */}
 			</Routes>
 			{msgAlerts.map((msgAlert) => (
 				<AutoDismissAlert

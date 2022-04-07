@@ -24,7 +24,7 @@ const authenticatedOptions = (
 			</Link>
 		</Nav.Item> */}
 		<NavDropdown title="/ / / / / / / /" id="basic-nav-dropdown" style={linkStyle} >
-			<Link to='/' style={linkStyle}>
+			<Link to='/search' style={linkStyle}>
  				Search
 			</Link> <br/>
 			<Link to='/favorites' style={linkStyle}>
