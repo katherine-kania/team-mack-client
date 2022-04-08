@@ -66,7 +66,7 @@ const Header = ({ user }) => (
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Brand>
 					<Link to='/' style={linkStyle} className='logo' >
-						smthing msc
+						smthing mscl
 					</Link>
 				</Navbar.Brand>
 		<Navbar.Collapse id='basic-navbar-nav'>

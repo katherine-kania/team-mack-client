@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap';
 import { getAllSearch } from '../../api/search.js'
-
 import { useNavigate } from 'react-router-dom';
-import { getSearchSuccess, getSearchFailure } from '../shared/AutoDismissAlert/messages'
 import SearchIndex from '../Search/SearchIndex'
 
 // we need to render a form that allows the user to search (events, venues, performers)
@@ -36,6 +34,13 @@ const GetSearch = (props) => {
             // }else if(type === "performers" && name === " ") {
             //     value = parseInt(e.target.value)
             // }
+            // if (search.type == 'performers') {
+            //    let [type] = 'performers'  
+            // } else if (search.type == 'events'){
+            //     let [type] = 'events'
+            // } else if (search.type == 'venues'){
+            //     let [type] = 'venues'
+            // } 
             const updatedValue = { [name]: value }
 
 
@@ -52,11 +57,23 @@ const GetSearch = (props) => {
 
 
         e.preventDefault()
+        let searchType = search.type
         getAllSearch(search.type, search.name)
+        
             // if create is successful we shoudl navigate to the show page
             .then(res => {
-                setSearchResults(res.data.performers)
-                console.log(searchResults)
+                if (search.type === 'performers'){
+                    setSearchResults(res.data.performers)
+                } else if (search.type === 'events'){
+                    setSearchResults(res.data.events)
+                } else if (search.type === 'venues'){
+                    setSearchResults(res.data.venues)
+                } else {
+                    return null
+                }
+                console.log('this is the res.data', res.data)
+
+                console.log('this is searchResults', searchResults)
                 //navigate(`/search/${search.type}/${search.name}`
 
                 // )
@@ -81,19 +98,11 @@ const GetSearch = (props) => {
 
         // console.log('this is the type', type)
     }
-
+    console.log('this is searchResults 2', searchResults)
     // want something to submit the form (getAllSearch)
     return (
         <>
             <Form onSubmit={handleSubmit}>
-                {/* <Form.Group controlId='type'>
-                    <Form.Control
-                        name="type"
-                        placeholder='events, performers, venues'
-                        value={search.type}
-                        onChange={handleChange}
-                    />
-                    </Form.Group> */}
                     <Form.Group controlId='type'>
                     <Form.Select name="type" onChange={handleChange} aria-label="Default select example">
                         <option>Select Your Type</option>
@@ -114,7 +123,7 @@ const GetSearch = (props) => {
                     SEARCH
                 </Button>
             </Form>
-            <SearchIndex searchResults={searchResults} search={search} />
+        <SearchIndex searchResults={searchResults} search={search} />
         </>
     )
 }

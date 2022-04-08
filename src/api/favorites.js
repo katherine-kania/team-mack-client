@@ -12,7 +12,19 @@ export const getAllFavorites = (user) => {
         },
     })
 }
-
+// POST -> favorites
+// export const addFavoriteSearch = (user, favoriteId, newComment) => {
+//     console.log('user', user)
+//     console.log('this is newPet', newComment)
+//     return axios({
+//         url: `${apiUrl}/search/${favoriteId}`,
+//         method: 'POST',
+//         data: { favorite: {
+//             type: "performers",
+//             seatGeekId: favorite.id
+//         } }
+//     })
+// }
 // SHOW -> one Favorite
 export const getOneFavorite = (id) => {
     return axios (`${apiUrl}/favorites/${id}`)
