@@ -56,7 +56,7 @@
 1. Fork and clone this repository
 2. [Fork and Clone](https://github.com/katherine-kania/team-mack-api) this repository as well and follow the instructions in that README
 3. In your terminal, run npm install to install node packages
-4. Run npm start to start running the client
+4. Run npm start to start running the client.
 
 # WireFrames
 
