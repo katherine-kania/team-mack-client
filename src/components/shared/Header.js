@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom'
 import ShowProfile from '../Profile/ShowProfile'
 
 const linkStyle = {
-  color: 'black',
+  color: 'green',
   textDecoration: 'none',
   fontFamily: 'Shadows Into Light',
 }

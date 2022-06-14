@@ -19,6 +19,11 @@
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
+  
+  "overrides": {
+    "graceful-fs": "^4.2.9"
+  },
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

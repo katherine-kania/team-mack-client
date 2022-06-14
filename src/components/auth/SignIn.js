@@ -57,7 +57,7 @@ const SignIn = (props) => {
     return (
         <div className='row'>
             <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-                <h3 className='m-2 logo'>Let's find your favorite music or something...</h3>
+                <h3 className='m-2 landingMessage'>Let's find your favorite music or something...</h3>
                 <h5>Sign In</h5>
                 <Form onSubmit={onSignIn}>
                     <Form.Group controlId='email'>
@@ -87,7 +87,7 @@ const SignIn = (props) => {
                     </Button>
                 </Form>
                 <div className='m-2'>
-                    <h3 className='logo'>
+                    <h3 className='landingMessage'>
                         Not a member? Please, sign up  
                         <Link to='/sign-up'>  HERE!</Link>
                     </h3>  
