@@ -3,7 +3,7 @@ import React from "react"
 const foot = {
     padding: '10px 20px',
     background: 'rgb(50, 50, 80)',
-    position: 'absolute',
+    position: 'fixed',
     bottom: '0',
     width: '100%',
 }

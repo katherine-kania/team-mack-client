@@ -78,25 +78,6 @@ const GetSearch = (props) => {
 
                 // )
             })
-        // console.log(res.data.search)
-        //console.log(search.type)
-        // {navigate(`${apiUrl}/search/${search.type}/${search.name}`)}
-        //then we send a success message
-        //        .then(() =>
-        //        msgAlert({
-        //            heading: 'Yay!',
-        //            message: getSearchSuccess,
-        //            variant: 'success',
-        //        }))
-        //    // if there is an error, we'll send an error message
-        //    .catch(() =>
-        //        msgAlert({
-        //            heading: 'Oh No!',
-        //            message: getSearchFailure,
-        //            variant: 'danger',
-        //        }))
-
-        // console.log('this is the type', type)
     }
     console.log('this is searchResults 2', searchResults)
     // want something to submit the form (getAllSearch)
