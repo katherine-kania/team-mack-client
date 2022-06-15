@@ -1,4 +1,3 @@
-// import React, { Component } from 'react'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
@@ -7,6 +6,7 @@ import messages from '../shared/AutoDismissAlert/messages'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import { Carousel } from '../shared/Carousel'
 
 
 const SignUp = (props) => {   
@@ -99,9 +99,7 @@ const SignUp = (props) => {
                     </h3>    
                 </div>
             </div>
-            <div className='background row'>
-                text
-            </div>
+            <Carousel/>
         </>
     )
 

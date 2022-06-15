@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const foot = {
     padding: '10px 20px',
@@ -11,14 +11,14 @@ const foot = {
 const Footer = () => {
   return (
     <div style={foot}>
-      <p style={{ color: "grey", 
-                   textAlign: "left", 
-                   marginTop: "auto",
+      <p style={{ color: 'grey', 
+                   textAlign: 'left', 
+                   marginTop: 'auto',
                    fontFamily: 'Catamaran'}}>
         © 2022 Something Musical
       </p>
    
     </div>
-  );
-};
-export default Footer;
+  )
+}
+export default Footer
