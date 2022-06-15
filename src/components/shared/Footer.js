@@ -1,8 +1,8 @@
 import React from "react";
 
 const foot = {
-    padding: '80px 60px',
-    background: 'black',
+    padding: '10px 20px',
+    background: 'rgb(50, 50, 80)',
     position: 'absolute',
     bottom: '0',
     width: '100%',
@@ -11,12 +11,13 @@ const foot = {
 const Footer = () => {
   return (
     <div style={foot}>
-      <h1 style={{ color: "green", 
+      <p style={{ color: "grey", 
                    textAlign: "left", 
-                   marginTop: "-50px" }}>
-        © 2022 Katherine Kania
-      </h1>
-      
+                   marginTop: "auto",
+                   fontFamily: 'Catamaran'}}>
+        © 2022 Something Musical
+      </p>
+   
     </div>
   );
 };
