@@ -94,7 +94,7 @@ const SignUp = (props) => {
                 </Form>
                 <h3 className='m-2 landingMessage'>
                     Already a member? Please, sign in  
-                    <Link className='landingLink' to='/sign-in'> HERE!</Link>
+                    <Link className='landingLink' to='/sign-in'> HERE</Link> !
                 </h3>    
             </div>
         </div>
