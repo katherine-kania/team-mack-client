@@ -14,12 +14,78 @@ code {
 
 .logo {
   font-size: 2em;
-  margin-left: 1em;
   font-family: 'Shadows Into Light';
+  text-decoration: none;
+  color: whitesmoke;
+  justify-content: center;
+  margin-left: 2em;
+  text-shadow: 2px 2px #ff0000;
+  font-weight: bold;
 }
 
 .landingMessage {
-  font-size: 2em;
+  font-size: 1.6em;
   margin-left: 1em;
   font-family: 'Shadows Into Light';
+  color: whitesmoke;
+  text-decoration: none;
+  padding-top: 1em;
+  font-weight: bold;
 }
+
+.landingLink {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+
+.landingLink:hover {
+  color: yellowgreen;
+  font-weight: bold;
+}
+
+.background {
+  background-color: rgb(73, 73, 94);
+  height: 100%;
+}
+
+.formText {
+  font-family: 'Shadows Into Light';
+  color: white;
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+
+.btn{
+  background-color: rgb(95, 95, 113);
+  color: red;
+  margin-top: 1em;
+  border: 0.16em solid #FFFFFF;
+  font-family: 'Shadows Into Light';
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: all 0.15s;
+}
+
+.btn:hover{
+  color:whitesmoke;
+  border-color:whitesmoke;
+  background-color: red;
+}
+.btn:active{
+  color:#BBBBBB;
+  border-color:#BBBBBB;
+}
+
+.input {
+  width: 80%;
+  font-family: 'Catamaran';
+  background-color: rgb(95, 95, 113);
+  border: none;
+  border-bottom: 2px solid red;
+  border-radius: 0;
+}
+.input:active {
+  border-color:#BBBBBB;
+}
+

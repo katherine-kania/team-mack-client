@@ -8,16 +8,8 @@ import messages from '../shared/AutoDismissAlert/messages'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const SignUp = (props) => {
-	// constructor(props) {
-	// 	super(props)
 
-	// 	this.state = {
-	// 		email: '',
-	// 		password: '',
-	// 		passwordConfirmation: '',
-	// 	}
-	// }    
+const SignUp = (props) => {   
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
@@ -56,14 +48,14 @@ const SignUp = (props) => {
 
 
     return (
-        <div className='row'>
+        <div className='background row'>
             <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-            <h3 className='m-2 logo'>Let's find your favorite music or something...</h3>
-                <h5>Sign Up</h5>
+            <h3 className='m-2 landingMessage'>Sign up to find your favorite music or something...</h3>
                 <Form onSubmit={onSignUp}>
                     <Form.Group controlId='email'>
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label className='formText'>Email address</Form.Label>
                         <Form.Control
+                            className='input'
                             required
                             type='email'
                             name='email'
@@ -73,8 +65,9 @@ const SignUp = (props) => {
                         />
                     </Form.Group>
                     <Form.Group controlId='password'>
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label className='formText'>Password</Form.Label>
                         <Form.Control
+                            className='input'
                             required
                             name='password'
                             value={password}
@@ -84,8 +77,9 @@ const SignUp = (props) => {
                         />
                     </Form.Group>
                     <Form.Group controlId='passwordConfirmation'>
-                        <Form.Label>Password Confirmation</Form.Label>
+                        <Form.Label className='formText'>Password Confirmation</Form.Label>
                         <Form.Control
+                            className='input'
                             required
                             name='passwordConfirmation'
                             value={passwordConfirmation}
@@ -94,16 +88,14 @@ const SignUp = (props) => {
                             onChange={e => setPasswordConfirmation(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant='primary' type='submit'>
-                        Submit
+                    <Button type='submit' className='btn'>
+                        SIGN ME UP
                     </Button>
                 </Form>
-                <div className='m-2'>
-                    <h3 className='logo'>
-                        Already a member? Please, sign in  
-                        <Link to='/sign-in'>  HERE!</Link>
-                    </h3>  
-                </div>
+                <h3 className='m-2 landingMessage'>
+                    Already a member? Please, sign in  
+                    <Link className='landingLink' to='/sign-in'> HERE!</Link>
+                </h3>    
             </div>
         </div>
     )

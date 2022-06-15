@@ -6,23 +6,16 @@ import { Link, useParams } from 'react-router-dom'
 import ShowProfile from '../Profile/ShowProfile'
 
 const linkStyle = {
-  color: 'green',
-  textDecoration: 'none',
-  fontFamily: 'Shadows Into Light',
+  margin: 'auto',
+  float: 'center',
+  display: 'flex',
+  justifyContent: 'space-between',
+  background: 'rgb(50, 50, 80)',
+  textAlign: 'center'
+
 }
 const authenticatedOptions = (
   <>
-    {/* <Nav.Item>
-			<Link to='change-password' style={linkStyle}>
-				Change Password
-			</Link>
-		</Nav.Item>
-		<Nav.Item>
-			<Link to='sign-out' style={linkStyle}>
-				Sign Out
-			</Link>
-		</Nav.Item> */}
-
     <NavDropdown
       title="/ / / / / / / /"
       id="basic-nav-dropdown"
@@ -54,47 +47,21 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <>
-    <Nav.Item>
-      <Link to="sign-up" style={linkStyle} className="m-2">
-        Sign Up
-      </Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Link to="sign-in" style={linkStyle} className="m-2">
-        Sign In
-      </Link>
-    </Nav.Item>
   </>
 )
 
-// const alwaysOptions = (
-// 	<>
-// 		<Nav.Link>
-// 			<Link to='/' style={linkStyle}>
-// 				Home
-// 			</Link>
-// 		</Nav.Link>
-// 	</>
-// )
 
 const Header = ({ user }) => (
-  <Navbar bg="light" variant="dark" expand="md">
+  <Navbar style={linkStyle}>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Brand>
-      <Link to="/search" style={linkStyle} className="logo">
-        smthing mscl
+      <Link to="/search" className="logo">
+        something musical
       </Link>
     </Navbar.Brand>
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="ml-auto">
-        {/* {user && (
-					<span className='navbar-text mr-2'>Welcome, {user.email}</span>
-				)} */}
-        {/* {alwaysOptions}	 */}
-      </Nav>
+    {/* <Navbar.Collapse id="basic-navbar-nav">
       {user ? authenticatedOptions : unauthenticatedOptions}
-    </Navbar.Collapse>
+    </Navbar.Collapse> */}
   </Navbar>
 )
-
 export default Header

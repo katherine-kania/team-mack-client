@@ -7,10 +7,14 @@ const Home = (props) => {
 	console.log('props in home', props)
 
 	return (
-		<>
+		<div
+			style={{
+				backgroundColor: "black",
+			}}
+		>
 			<h2 className="logo">SEARCH SMTHNG</h2>
 			
-		</>
+		</div>
 	)
 }
 
