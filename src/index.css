@@ -23,6 +23,11 @@ code {
   font-weight: bold;
 }
 
+.logo:hover {
+  color: yellowgreen;
+  text-shadow: none;
+}
+
 .landingMessage {
   font-size: 1.6em;
   margin-left: 1em;
