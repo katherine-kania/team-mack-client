@@ -1,10 +1,10 @@
 import React from "react"
-// import star from '../Images/star.gif'
+import musicgif from './Images/music.gif'
 
 export const Carousel = () => {
     return (
-        <div className='background'>
-            {/* <img src={star} alt="stars"/> */}
+        <div className='background gifPosition'>
+            <img src={musicgif} alt="loading..." />
         </div>
     )
 

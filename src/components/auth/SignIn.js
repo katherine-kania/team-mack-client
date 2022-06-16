@@ -45,7 +45,7 @@ const SignIn = (props) => {
     return (
         <>
             <div className='background row'>
-                <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+                <div className='col-sm-10 col-md-8 mx-auto mt-5 '>
                     <h3 className='m-2 landingMessage'>Sign in to find your favorite music or something...</h3>
                     <Form onSubmit={onSignIn}>
                         <Form.Group controlId='email'>

@@ -7,19 +7,20 @@ import ShowProfile from '../Profile/ShowProfile'
 
 const linkStyle = {
   margin: 'auto',
-  float: 'center',
   display: 'flex',
   justifyContent: 'space-between',
   background: 'rgb(50, 50, 80)',
-  textAlign: 'center'
-
+  textAlign: 'center',
+  color: 'whitesmoke',
+  width: '100%'
 }
+
+
 const authenticatedOptions = (
-  <>
+  <div>
     <NavDropdown
-      title="/ / / / / / / /"
-      id="basic-nav-dropdown"
-      style={linkStyle}
+      title="EXPLORE YOUR OPTIONS"
+      className='landingMessage'
     >
       <Link to="/search" style={linkStyle}>
         Search
@@ -42,7 +43,7 @@ const authenticatedOptions = (
       </Link>
       <br />
     </NavDropdown>
-  </>
+  </div>
 )
 
 const unauthenticatedOptions = (
@@ -59,9 +60,9 @@ const Header = ({ user }) => (
         something musical
       </Link>
     </Navbar.Brand>
-    {/* <Navbar.Collapse id="basic-navbar-nav">
+    <Navbar.Collapse className="basic-navbar-nav">
       {user ? authenticatedOptions : unauthenticatedOptions}
-    </Navbar.Collapse> */}
+    </Navbar.Collapse>
   </Navbar>
 )
 export default Header

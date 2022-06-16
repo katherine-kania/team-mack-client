@@ -47,16 +47,12 @@ const App = () => {
   return (
     <Fragment>
       <Header user={user} />
-      <Routes
-        style={{
-				backgroundColor: "black",
-			}}
-      >
+      <Routes>
         <Route
           path="/"
           element={
             <RequireAuth user={user}>
-             
+               <Home msgAlert={msgAlert} user={user} />
             </RequireAuth>
           }
         />

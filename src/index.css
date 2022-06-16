@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(73, 73, 94);
 }
 
 code {
@@ -53,7 +54,13 @@ code {
 .background {
   background-color: rgb(73, 73, 94);
   height: 100%;
-  min-height: calc(40vh - 40px);
+  min-height: calc(50vh - 50px);
+  margin-left: 10%;
+}
+
+.gifPosition {
+  margin-left: 25%;
+  padding-top: 5%;
 }
 
 .formText {
