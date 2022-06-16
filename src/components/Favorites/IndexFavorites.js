@@ -30,9 +30,9 @@ const IndexFavorites = (props) => {
     }, [])
 
     if (!favorites) {
-        return <p>loading...</p>
+        return <p className='landingMessage'>loading...</p>
     } else if (favorites.length === 0) {
-        return <p>no favorite picks yet, go add some</p>
+        return <p className='landingMessage'>No favorite picks yet, go add some!</p>
     }
 
     let favoriteCards

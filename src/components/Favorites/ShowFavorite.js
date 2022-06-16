@@ -67,7 +67,7 @@ const ShowFavorite = (props) => {
         return (
             <Container fluid className="justify-content-center">
                 <Spinner animation="border" role="status" variant="warning" >
-                    <span className="visually-hidden">Loading....</span>
+                    <span className="visually-hidden landingMessage">Loading....</span>
                 </Spinner>
             </Container>
         )

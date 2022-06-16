@@ -16,7 +16,7 @@ const SearchIndex = (props) => {
     if (searchResults === null) {
         return (
             <>
-                <h3 className="logo">SEARCH HERE</h3>
+                <h3 className="landingMessage">SEARCH HERE</h3>
             </>
         )
     }

@@ -4,6 +4,18 @@ import { getAllSearch } from '../../api/search.js'
 import { useNavigate } from 'react-router-dom';
 import SearchIndex from '../Search/SearchIndex'
 
+const searchBar = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column'
+}
+
+const inputBar = {
+    width: '60%',
+    paddingLeft: '15%'
+}
+
 // we need to render a form that allows the user to search (events, venues, performers)
 const GetSearch = (props) => {
     const { user, msgAlert } = props
@@ -82,10 +94,11 @@ const GetSearch = (props) => {
     console.log('this is searchResults 2', searchResults)
     // want something to submit the form (getAllSearch)
     return (
-        <>
-            <Form onSubmit={handleSubmit}>
+        <div style={searchBar}>
+            <SearchIndex searchResults={searchResults} search={search} />
+            <Form className='m-2' style={inputBar} onSubmit={handleSubmit}>
                     <Form.Group controlId='type'>
-                    <Form.Select name="type" onChange={handleChange} aria-label="Default select example">
+                    <Form.Select className='input' name="type" onChange={handleChange} aria-label="Default select example">
                         <option>Select Your Type</option>
                         <option value={search.type}>events</option>
                         <option value={search.type}>performers</option>
@@ -94,6 +107,7 @@ const GetSearch = (props) => {
                 </Form.Group>
                 <Form.Group controlId='name'>
                     <Form.Control
+                        className='input'
                         name="name"
                         placeholder='name of event, artist, or venue'
                         value={search.name}
@@ -104,8 +118,8 @@ const GetSearch = (props) => {
                     SEARCH
                 </Button>
             </Form>
-        <SearchIndex searchResults={searchResults} search={search} />
-        </>
+        
+        </div>
     )
 }
 
