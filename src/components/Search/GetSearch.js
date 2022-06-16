@@ -13,7 +13,7 @@ const searchBar = {
 
 const inputBar = {
     width: '60%',
-    paddingLeft: '15%'
+    paddingLeft: '15%',
 }
 
 // we need to render a form that allows the user to search (events, venues, performers)
