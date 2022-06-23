@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
     // YOU MUST CHANGE PRODUCTION URL WHEN DEPLOYING
-	production: 'https://smthing-mscl.herokuapp.com',
+	production: 'https://smthng-mscl.herokuapp.com',
 	development: 'http://localhost:8000',
 }
 
